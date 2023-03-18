@@ -71,17 +71,10 @@ vim.cmd.colorscheme('habamax')
 
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
-  virtual_text = false, -- disable diagnostic message on the right side
+  virtual_text = true, -- disable diagnostic message on the right side
   float = {
     border = NONE
   },
-})
--- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
-vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
-  callback = function()
-    vim.diagnostic.open_float(nil, {focus = false})
-  end
 })
 
 -- [[ folding settings (press za to toggle folds) ]]

@@ -88,5 +88,12 @@ return {
       })
 
     end
+  },
+  {
+    "folke/trouble.nvim",
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    keys = {
+      { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" }
+    }
   }
 } -- End plugins manager
