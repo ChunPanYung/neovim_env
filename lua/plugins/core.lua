@@ -95,5 +95,12 @@ return {
     keys = {
       { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" }
     }
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      show_current_context = true,
+      show_current_context_start = true
+    }
   }
 } -- End plugins manager
