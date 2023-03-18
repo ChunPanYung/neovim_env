@@ -6,7 +6,7 @@ return {
     version = false,
     keys = {
       { "<Leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files"},
-      { "<Leader>fg", "<cmd>Telescope live_grep", desc = "Search file contents"},
+      { "<Leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Search file contents"},
     }
   },
 }
