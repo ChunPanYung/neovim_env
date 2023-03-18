@@ -68,7 +68,7 @@ return {
       local lsp_opts = {
         single_file_support = false
       }
-      lsp.setup_servers({'bashls', 'ruff_lsp', 'rust_analyzer',
+      lsp.setup_servers({'ruff_lsp', 'rust_analyzer',
         -- Web Development
         'quick_lint_js', 'tsserver',
         -- DevOps
