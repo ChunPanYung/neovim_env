@@ -2,7 +2,6 @@
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-keymap("t", "<Esc>", "<C-\\><C-n>", opts) -- map <Esc> to exit terminal-mode
 keymap("v", "<C-_>", "gc", { silent = true }) -- Map <C-_> and <C-/> to gcc
 
 -- [[ Insert Mode ]]
