@@ -71,7 +71,7 @@ vim.cmd.colorscheme('habamax')
 
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
-  virtual_text = true, -- disable diagnostic message on the right side
+  virtual_text = true,
   float = {
     border = NONE
   },
