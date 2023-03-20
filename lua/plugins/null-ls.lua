@@ -6,7 +6,6 @@ return {
       local null_ls = require("null-ls")
       null_ls.setup({
         sources = {
-          null_ls.builtins.diagnostics.ansiblelint,
           null_ls.builtins.diagnostics.hadolint, -- dockerfile
           null_ls.builtins.diagnostics.ruff, -- python
           null_ls.builtins.diagnostics.shellcheck, -- shell script
