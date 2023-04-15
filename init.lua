@@ -47,7 +47,7 @@ vim.opt.termguicolors = true
 
 set.completeopt = 'menuone,noselect'
 
-vim.opt.exrc = true -- Enable local directory settings
+vim.o.exrc = true -- Enable local directory settings
 
 -- [[ Tab & Indent ]]
 set.expandtab = true
@@ -71,18 +71,21 @@ vim.cmd.colorscheme('habamax')
 
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
-  virtual_text = false, -- disable diagnostic message on the right side
+  virtual_text = true,
   float = {
-    border = NONE
+    border = nil
   },
 })
--- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
-vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
-  callback = function()
-    vim.diagnostic.open_float(nil, {focus = false})
-  end
-})
+
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {border = nil}
+)
+
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {border = nil}
+)
 
 -- [[ folding settings (press za to toggle folds) ]]
 set.foldmethod = 'indent'  -- Fold based on indent
