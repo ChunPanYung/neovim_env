@@ -47,7 +47,7 @@ vim.opt.termguicolors = true
 
 set.completeopt = 'menuone,noselect'
 
-vim.opt.exrc = true -- Enable local directory settings
+vim.o.exrc = true -- Enable local directory settings
 
 -- [[ Tab & Indent ]]
 set.expandtab = true

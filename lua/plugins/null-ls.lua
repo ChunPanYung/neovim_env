@@ -12,6 +12,7 @@ return {
           null_ls.builtins.diagnostics.standardjs,
           null_ls.builtins.diagnostics.yamllint,
 
+          null_ls.builtins.formatting.black,
           null_ls.builtins.formatting.ruff,
           null_ls.builtins.formatting.standardjs,
         }
