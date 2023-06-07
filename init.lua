@@ -69,8 +69,6 @@ set.showbreak = '↪'
 set.listchars = { trail = '·', tab = '» ' }
 vim.opt.list = true
 
-vim.cmd.colorscheme('habamax')
-
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
   virtual_text = true,
