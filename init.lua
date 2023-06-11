@@ -69,6 +69,8 @@ set.showbreak = '↪'
 set.listchars = { trail = '·', tab = '» ' }
 vim.opt.list = true
 
+vim.cmd.colorscheme('tokyonight')
+
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
   virtual_text = true,

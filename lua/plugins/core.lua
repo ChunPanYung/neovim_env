@@ -54,7 +54,7 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        theme = 'Tomorrow',
+        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       }
@@ -102,10 +102,9 @@ return {
     }
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    opts = {
-      show_current_context = true,
-      show_current_context_start = true
-    }
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   }
 } -- End plugins manager
