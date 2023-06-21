@@ -47,7 +47,9 @@ vim.opt.termguicolors = true
 
 set.completeopt = 'menuone,noselect'
 
-vim.o.exrc = true -- Enable local directory settings
+-- Enable local directory settings
+vim.o.exrc = true
+vim.o.secure = true
 
 -- [[ Tab & Indent ]]
 set.expandtab = true
@@ -67,7 +69,7 @@ set.showbreak = '↪'
 set.listchars = { trail = '·', tab = '» ' }
 vim.opt.list = true
 
-vim.cmd.colorscheme('habamax')
+vim.cmd.colorscheme('tokyonight')
 
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
