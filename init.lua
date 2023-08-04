@@ -59,7 +59,6 @@ set.softtabstop = 2
 set.tabstop = 2
 set.smartindent = true
 set.autoindent = true
-set.breakindent = true
 
 -- [[ Line Break ]]
 set.linebreak = true
