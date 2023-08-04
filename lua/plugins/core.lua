@@ -17,10 +17,14 @@ return {
       require("bufferline").setup{}
     end,
     keys = {
-      {"<Leader>Z", ":write<CR>:bprevious<CR>:bdelete #<CR><C-l>", desc = 'Save and close current buffer'},
-      {"<Leader>q", ":bprevious<CR>:bdelete #<CR><C-l>", desc = 'Close current buffer'},
       {"<S-l>", ":BufferLineCycleNext<CR>", desc = "Next Buffer"},
       {"<S-h>", ":BufferLineCyclePrev<CR>", desc = "Prev Buffer"}
+    },
+    opts = {
+      options = {
+        close_command = function(n) require("mini.bufremove").delete(n, false) end,
+        right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end
+      }
     }
   },
   { -- File explorer
@@ -38,6 +42,7 @@ return {
       },
       filesystem = {
         filtered_items = {
+          hide_dotfiles = false,
           never_show = {
             ".git"
           }
@@ -101,10 +106,18 @@ return {
       { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" }
     }
   },
-  {
+  { -- color theme
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
-  }
+  },
+  { -- buffer remove
+    "echasnovski/mini.bufremove",
+    -- stylua: ignore
+    keys = {
+      { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
+      { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
+    },
+  },
 } -- End plugins manager
