@@ -2,21 +2,24 @@ return {
   {
     'jose-elias-alvarez/null-ls.nvim',
     dependencies = {'nvim-lua/plenary.nvim'},
-    config = function ()
-      local null_ls = require("null-ls")
-      null_ls.setup({
+    opts = function()
+      local nls = require("null-ls")
+      return {
+        root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
         sources = {
-          null_ls.builtins.diagnostics.hadolint, -- dockerfile
-          null_ls.builtins.diagnostics.ruff, -- python
-          null_ls.builtins.diagnostics.shellcheck, -- shell script
-          null_ls.builtins.diagnostics.standardjs,
-          null_ls.builtins.diagnostics.yamllint,
+          nls.builtins.diagnostics.hadolint, -- dockerfile
+          nls.builtins.diagnostics.shellcheck, -- shell script
+          nls.builtins.diagnostics.standardjs,
+          nls.builtins.diagnostics.yamllint,
 
-          null_ls.builtins.formatting.black,
-          null_ls.builtins.formatting.ruff,
-          null_ls.builtins.formatting.standardjs,
-        }
-      })
-    end
+          nls.builtins.formatting.black,
+          nls.builtins.formatting.ruff,
+          nls.builtins.formatting.standardjs,
+
+          nls.builtins.formatting.stylua, -- lua formatting
+          nls.builtins.formatting.shfmt,
+        },
+      }
+    end,
   }
 }
