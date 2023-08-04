@@ -7,7 +7,6 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.diagnostics.hadolint, -- dockerfile
-          null_ls.builtins.diagnostics.ruff, -- python
           null_ls.builtins.diagnostics.shellcheck, -- shell script
           null_ls.builtins.diagnostics.standardjs,
           null_ls.builtins.diagnostics.yamllint,
