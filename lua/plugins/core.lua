@@ -11,7 +11,10 @@ return {
   { -- bufferline.nvim
     'akinsho/bufferline.nvim',
     version = "v3.*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+      "echasnovski/mini.bufremove",
+    },
     init = function()
       vim.opt.termguicolors = true
       require("bufferline").setup{}
@@ -99,7 +102,7 @@ return {
 
     end
   },
-  {
+  { -- Showing diagnostics, references, telescope results, quickfix etc.
     "folke/trouble.nvim",
     dependencies = 'nvim-tree/nvim-web-devicons',
     keys = {
@@ -119,5 +122,19 @@ return {
       { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
       { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
     },
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+    config = function ()
+      require("telescope").load_extension("lazygit")
+    end,
+    keys = {
+      { "<Leader>g", function() require('lazygit.utils').project_root_dir() end }
+    }
   },
 } -- End plugins manager
