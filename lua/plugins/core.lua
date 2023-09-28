@@ -106,7 +106,8 @@ return {
     "folke/trouble.nvim",
     dependencies = 'nvim-tree/nvim-web-devicons',
     keys = {
-      { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" }
+      { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" },
+      { "gR", "<cmd>TroubleToggle lsp_references<cr>", desc = "Toggle references" }
     }
   },
   { -- color theme
