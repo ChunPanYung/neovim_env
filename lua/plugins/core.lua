@@ -1,7 +1,7 @@
 return {
   { -- Auto-pair
     "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
+    config = function() require("nvim-autopairs").setup{} end
   },
   { -- Git Conflict Tool
     'akinsho/git-conflict.nvim',
@@ -106,7 +106,8 @@ return {
     "folke/trouble.nvim",
     dependencies = 'nvim-tree/nvim-web-devicons',
     keys = {
-      { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" }
+      { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" },
+      { "gR", "<cmd>TroubleToggle lsp_references<cr>", desc = "Toggle references" }
     }
   },
   { -- color theme
@@ -120,6 +121,7 @@ return {
     -- stylua: ignore
     keys = {
       { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
+      { "<leader>q", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
       { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
     },
   },

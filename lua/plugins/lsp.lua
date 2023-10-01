@@ -54,6 +54,11 @@ return {
           end, { 'i', 's' }),
         })
       })
+      -- Disable set_lsp_keymaps
+      lsp.default_keymaps({
+        -- buffer = bufnr,
+        omit = {'<F3>'}
+      })
 
       -- See :help lsp-zero-preferences
       lsp.set_preferences({
