@@ -1,7 +1,7 @@
 return {
   { -- Auto-pair
     "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
+    config = function() require("nvim-autopairs").setup{} end
   },
   { -- Git Conflict Tool
     'akinsho/git-conflict.nvim',
