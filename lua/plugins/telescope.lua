@@ -7,7 +7,7 @@ return {
     keys = {
       { "<Leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files"},
       { "<Leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Search file contents"},
-      { "<Leader>fl", "<cmd>lua require('telescope.builtin').treesitter()<cr>", desc = "List functions and variables from treesitter"}
+      { "<Leader>ft", "<cmd>lua require('telescope.builtin').treesitter()<cr>", desc = "List functions and variables from treesitter"}
     }
   },
 }
