@@ -16,14 +16,14 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      {'hrsh7th/cmp-buffer'},       -- Optional
-      {'hrsh7th/cmp-path'},         -- Optional
-      {'saadparwaiz1/cmp_luasnip'}, -- Optional
-      {'hrsh7th/cmp-nvim-lua'},     -- Optional
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'}, -- Optional
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' }, -- Optional
     },
     config = function()
       -- Here is where you configure the autocompletion settings.
@@ -35,6 +35,11 @@ return {
       local cmp_action = lsp_zero.cmp_action()
 
       cmp.setup({
+        -- Preselect the first item
+        preselect = 'item',
+        completion = {
+          completeopt = 'menu,menuone,noinsert'
+        },
         sources = {
           { name = 'buffer' },
           { name = 'path' },
@@ -43,6 +48,9 @@ return {
         },
         formatting = lsp_zero.cmp_format(),
         mapping = cmp.mapping.preset.insert({
+          -- `Enter` key to confirm completion
+          -- ['<CR>'] = cmp.mapping.confirm({ select = false }),
+          ['<CR>'] = cmp.mapping.confirm({select = true}),
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-u>'] = cmp.mapping.scroll_docs(-4),
           ['<C-d>'] = cmp.mapping.scroll_docs(4),
@@ -64,9 +72,9 @@ return {
   {
     'neovim/nvim-lspconfig',
     cmd = 'LspInfo',
-    event = {'BufReadPre', 'BufNewFile'},
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
+      { 'hrsh7th/cmp-nvim-lsp' },
     },
     config = function()
       -- This is where all the LSP shenanigans will live
@@ -86,7 +94,7 @@ return {
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
 
-      lsp_zero.setup_servers({'ruff_lsp', 'rust_analyzer',
+      lsp_zero.setup_servers({ 'ruff_lsp', 'rust_analyzer',
         -- Web Development
         'quick_lint_js', 'tsserver',
         -- DevOps
