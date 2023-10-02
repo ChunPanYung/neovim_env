@@ -91,8 +91,16 @@ return {
       end)
 
       -- (Optional) Configure lua language server for neovim
+      local lspconfig = require('lspconfig')
       local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+      lspconfig.lua_ls.setup(lua_opts)
+      -- Disable lsp formatter when using ruff_lsp
+      lspconfig.ruff_lsp.setup({
+        on_init =  function(client)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentFormattingRangeProvider = false
+        end
+      })
 
       lsp_zero.setup_servers({ 'ruff_lsp', 'rust_analyzer',
         -- Web Development
