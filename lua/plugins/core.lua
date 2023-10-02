@@ -136,7 +136,7 @@ return {
       require("telescope").load_extension("lazygit")
     end,
     keys = {
-      { "<Leader>g", "<cmd>LazyGit<CR>", desc = "Open LazyGit" }
+      { "<Leader>gg", "<cmd>LazyGit<CR>", desc = "Open LazyGit" }
     }
   },
 } -- End plugins manager
