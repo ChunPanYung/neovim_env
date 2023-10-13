@@ -17,6 +17,13 @@ vim.api.nvim_create_user_command('Trimspace', function()
   ]])
 end, {})
 
+vim.api.nvim_create_user_command('Bufonly', function()
+  vim.cmd([[
+    " Close all buffers but current one
+    %bd | e#
+  ]])
+end, {})
+
 -- [[Auto Commands]]
 -- Create group to assign commands, "clear = true" must be set to prevent loading an
 -- auto-command repeatedly every time a file is resourced
