@@ -63,6 +63,8 @@ set.autoindent = true
 -- [[ Line Break ]]
 set.linebreak = true
 set.showbreak = '↪'
+vim.opt.wrap = true
+vim.opt.textwidth = 80  -- To format line to textwidth, type 'gq' in normal mode.
 
 -- [[ Display invisible characters ]]
 set.listchars = { trail = '·', tab = '» ' }
