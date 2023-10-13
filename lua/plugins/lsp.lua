@@ -102,7 +102,7 @@ return {
         end
       })
 
-      lsp_zero.setup_servers({ 'ruff_lsp', 'rust_analyzer',
+      lsp_zero.setup_servers({ 'ruff_lsp', 'rust_analyzer', "bashls",
         -- Web Development
         'quick_lint_js', 'tsserver',
         -- DevOps
