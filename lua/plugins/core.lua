@@ -41,7 +41,7 @@ return {
     opts = {
       close_if_last_window = true,
       window = {
-        width = 30
+        width = 28
       },
       filesystem = {
         filtered_items = {
@@ -136,7 +136,7 @@ return {
       require("telescope").load_extension("lazygit")
     end,
     keys = {
-      { "<Leader>g", "<cmd>LazyGit<CR>", desc = "Open LazyGit" }
+      { "<Leader>gg", "<cmd>LazyGit<CR>", desc = "Open LazyGit" }
     }
   },
 } -- End plugins manager
