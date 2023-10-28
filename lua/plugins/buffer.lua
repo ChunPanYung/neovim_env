@@ -2,6 +2,7 @@ return {
   { -- bufferline.nvim
     'akinsho/bufferline.nvim',
     version = "v3.*",
+    enabled = true,
     dependencies = {
       'nvim-tree/nvim-web-devicons',
       "echasnovski/mini.bufremove",
@@ -23,6 +24,7 @@ return {
   },
   { -- buffer remove
     "echasnovski/mini.bufremove",
+    enabled = true,
     -- stylua: ignore
     keys = {
       { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
