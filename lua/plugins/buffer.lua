@@ -29,13 +29,6 @@ return {
     -- stylua: ignore
     keys = {
       {
-        "<leader>bd",
-        function()
-          require("mini.bufremove").delete(0, false)
-        end,
-        desc = "Delete Buffer"
-      },
-      {
         "<leader>q",
         function()
           require("mini.bufremove").delete(0, false)
@@ -49,6 +42,12 @@ return {
         end,
         desc = "Delete Buffer (Force)"
       },
+      {
+        "<leader>z",
+        ":w<CR><leader>q",
+        desc = "Save the quit current buffer.",
+        remap = true
+      }
     },  -- end keys
   },  -- end buffer remove
 }
