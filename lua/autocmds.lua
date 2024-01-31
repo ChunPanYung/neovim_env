@@ -20,7 +20,7 @@ end, {})
 vim.api.nvim_create_user_command('Bufonly', function()
   vim.cmd([[
     " Close all buffers but current one
-    %bd | e#
+    %bd | e# | bd#
   ]])
 end, {})
 
