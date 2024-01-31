@@ -10,7 +10,9 @@ keymap("i", "<M-BS>", "<C-W>", { silent = true }) -- map <M-BS> to delete word
 keymap("i", "<C-s>", "<Esc>:write<CR>i", { silent = true }) -- map <M-BS> to delete word
 
 -- [[ Normal mode ]]
-keymap("n", "<C-_>", "gcc", { silent = true }) -- Map <C-_> and <C-/> to gcc
+-- Map <C-_> and <C-/> to gcc
+keymap("n", "<C-_>", "gcc", { silent = true })
+
 -- [[ insert single character before cursor ]]
 vim.cmd([[
 nnoremap ,i :exec "normal i".nr2char(getchar())."\e"<CR>

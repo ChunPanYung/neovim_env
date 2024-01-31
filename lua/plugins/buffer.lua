@@ -13,7 +13,7 @@ return {
     end,
     keys = {
       {"<S-l>", ":BufferLineCycleNext<CR>", desc = "Next Buffer"},
-      {"<S-h>", ":BufferLineCyclePrev<CR>", desc = "Prev Buffer"}
+      {"<S-h>", ":BufferLineCyclePrev<CR>", desc = "Prev Buffer"},
     },
     opts = {
       options = {
@@ -27,9 +27,26 @@ return {
     enabled = true,
     -- stylua: ignore
     keys = {
-      { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
-      { "<leader>q", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
-      { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
-    },
-  },
+      {
+        "<leader>q",
+        function()
+          require("mini.bufremove").delete(0, false)
+        end,
+        desc = "Delete Buffer"
+      },
+      {
+        "<leader>bD",
+        function()
+          require("mini.bufremove").delete(0, true)
+        end,
+        desc = "Delete Buffer (Force)"
+      },
+      {
+        "<leader>bz",
+        ":w<CR><leader>q",
+        desc = "Save the quit current buffer.",
+        remap = true
+      }
+    },  -- end keys
+  },  -- end buffer remove
 }
