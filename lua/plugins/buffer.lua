@@ -14,7 +14,6 @@ return {
     keys = {
       {"<S-l>", ":BufferLineCycleNext<CR>", desc = "Next Buffer"},
       {"<S-h>", ":BufferLineCyclePrev<CR>", desc = "Prev Buffer"},
-      {"<Leader>bz", ":w<BAR>bd", desc = "Save and quit current buffer"}
     },
     opts = {
       options = {
@@ -43,7 +42,7 @@ return {
         desc = "Delete Buffer (Force)"
       },
       {
-        "<leader>z",
+        "<leader>bz",
         ":w<CR><leader>q",
         desc = "Save the quit current buffer.",
         remap = true
