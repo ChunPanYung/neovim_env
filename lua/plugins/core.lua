@@ -108,4 +108,8 @@ return {
       { "<Leader>gg", "<cmd>LazyGit<CR>", desc = "Open LazyGit" }
     }
   },
+  {
+    "folke/neodev.nvim",
+    opts = {}
+  }
 } -- End plugins manager
