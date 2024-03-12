@@ -8,22 +8,27 @@ return {
       auto_install = true,
       ensure_installed = {
         'bash',
+
+        'markdown',
+
+        'go',
         'rust',
         'lua',
         'python',
-        'markdown',
-        'go',
-        'toml',
         -- Web development
         'html',
         'css',
         'typescript',
         'javascript',
-        'json',
         -- IaC
         'dockerfile',
+
+        -- Configuration file
         'hcl',
+        'json',
         'yaml',
+        'toml',
+        'ini'
       },
       highlight = {
         enable = true,
