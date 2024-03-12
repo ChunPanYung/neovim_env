@@ -26,7 +26,14 @@ return {
       { "<Leader>e", "<cmd>Neotree toggle<cr>", desc = "Neotree" }
     }
   },
-  {
-    'echasnovski/mini.nvim', version = false
+  { -- Mini.files
+    'echasnovski/mini.files',
+    version = false,
+    config = function()
+      require('mini.files').setup()
+    end,
+    keys = {
+      { "<Leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Open Mini.files navigation." }
+    }
   }
 }
