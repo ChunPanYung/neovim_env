@@ -70,8 +70,6 @@ vim.opt.textwidth = 80  -- To format line to textwidth, type 'gq' in normal mode
 set.listchars = { trail = '·', tab = '» ' }
 vim.opt.list = true
 
-vim.cmd.colorscheme('tokyonight')
-
 -- [[ Diagnostic Settings ]]
 vim.diagnostic.config({
   virtual_text = true,

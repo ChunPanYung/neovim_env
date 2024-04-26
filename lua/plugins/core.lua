@@ -8,18 +8,6 @@ return {
     version = "*",
     config = true
   },
-  { -- Statusline
-    'nvim-lualine/lualine.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    event = "VeryLazy",
-    opts = {
-      options = {
-        theme = 'tokyonight',
-        component_separators = '|',
-        section_separators = '',
-      }
-    }
-  },
   {
     'akinsho/toggleterm.nvim',
     opts = {
@@ -61,13 +49,6 @@ return {
       { "<Leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble.nvim" },
       { "gR", "<cmd>TroubleToggle lsp_references<cr>", desc = "Toggle references" }
     }
-  },
-  { -- color theme
-    "folke/tokyonight.nvim",
-    lazy = false,
-    enabled = false,
-    priority = 1000,
-    opts = {},
   },
   {
     "kdheepak/lazygit.nvim",
