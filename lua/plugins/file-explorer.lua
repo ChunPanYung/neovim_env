@@ -28,12 +28,28 @@ return {
   },
   { -- Mini.files
     'echasnovski/mini.files',
+    enabled = true,
     version = false,
     config = function()
       require('mini.files').setup()
     end,
     keys = {
       { "<Leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Open Mini.files navigation." }
+    }
+  },
+  {
+    'stevearc/oil.nvim',
+    enabled = false,
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function(_, opts)
+      require('oil').setup(opts)
+    end,
+    keys = {
+      {
+        "<Leader>e", "<cmd>Oil --float<cr>",
+        desc = "Open oil browser in a floating window, or close it if open."
+      }
     }
   }
 }
