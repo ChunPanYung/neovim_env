@@ -4,7 +4,8 @@ vim.filetype.add {
     ['Jenkinsfile'] ='groovy'
   },
   extension = {
-    tf = 'terraform'
+    tf = 'terraform',
+    Containerfile = 'dockerfile'
   },
 }
 -- Setup functions to call depends on filetype
