@@ -5,7 +5,6 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       }
@@ -23,6 +22,7 @@ return {
   },
   {
     "scottmckendry/cyberdream.nvim",
+    enabled = true,
     lazy = false,
     dependencies = 'nvim-lualine/lualine.nvim',
     priority = 1000,
