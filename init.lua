@@ -71,22 +71,22 @@ set.listchars = { trail = '·', tab = '» ' }
 vim.opt.list = true
 
 -- [[ Diagnostic Settings ]]
-vim.diagnostic.config({
-  virtual_text = true,
-  float = {
-    border = nil
-  },
-})
-
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  {border = nil}
-)
-
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help,
-  {border = nil}
-)
+-- vim.diagnostic.config({
+--   virtual_text = true,
+--   float = {
+--     border = nil
+--   },
+-- })
+--
+-- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+--   vim.lsp.handlers.hover,
+--   {border = nil}
+-- )
+--
+-- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+--   vim.lsp.handlers.signature_help,
+--   {border = nil}
+-- )
 
 -- [[ folding settings (press za to toggle folds) ]]
 set.foldmethod = 'indent'  -- Fold based on indent

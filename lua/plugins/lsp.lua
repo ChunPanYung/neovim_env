@@ -86,7 +86,7 @@ return {
         -- to learn the available actions
         lsp_zero.default_keymaps({
           buffer = bufnr,
-          preserve_mappings = false
+          preserve_mappings = false,
         })
       end)
 

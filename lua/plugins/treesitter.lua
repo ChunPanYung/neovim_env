@@ -8,8 +8,10 @@ return {
       auto_install = true,
       ensure_installed = {
         'bash',
-
         'markdown',
+        'markdown_inline',
+        'regex',
+        'vim',
 
         'go',
         'rust',
