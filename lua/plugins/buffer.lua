@@ -14,6 +14,7 @@ return {
     keys = {
       {"<S-l>", ":BufferLineCycleNext<CR>", desc = "Next Buffer"},
       {"<S-h>", ":BufferLineCyclePrev<CR>", desc = "Prev Buffer"},
+      {"<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers"}
     },
     opts = {
       options = {
