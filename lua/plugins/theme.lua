@@ -5,7 +5,6 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       }
@@ -14,16 +13,17 @@ return {
   { -- color theme
     "folke/tokyonight.nvim",
     lazy = false,
-    enabled = false,
+    enabled = true,
     priority = 1000,
     opts = {},
     config = function ()
-      vim.cmd.colorscheme('tokyonight')
+      vim.cmd.colorscheme('tokyonight-night')
     end
   },
   {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
+    enabled = false,
     dependencies = 'nvim-lualine/lualine.nvim',
     priority = 1000,
     config = function()
