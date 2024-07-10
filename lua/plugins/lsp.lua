@@ -87,7 +87,6 @@ return {
         lsp_zero.default_keymaps({
           buffer = bufnr,
           preserve_mappings = false,
-          exlude = {'K'}
         })
       end)
 
