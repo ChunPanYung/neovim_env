@@ -13,6 +13,9 @@ keymap("i", "<C-s>", "<Esc>:write<CR>i", { silent = true }) -- map <M-BS> to del
 -- Map <C-_> and <C-/> to gcc
 keymap("n", "<C-_>", "gcc", { silent = true })
 
+-- Save current buffer and exit
+vim.keymap.set('n', '<Leader>zz', '<Cmd>write | bdelete<CR>', opts)
+
 -- [[ insert single character before cursor ]]
 vim.cmd([[
 nnoremap ,i :exec "normal i".nr2char(getchar())."\e"<CR>
