@@ -16,6 +16,7 @@ keymap("n", "<C-_>", "gcc", { silent = true })
 -- [[ buffer ]]
 vim.keymap.set('n', '<Leader>zz', '<Cmd>write | bdelete<CR>', opts)
 vim.keymap.set("n", "<leader>bd", "<Cmd>bdelete<CR>", opts)
+vim.keymap.set("n", "<leader>q", "<Cmd>bdelete<CR>", opts)
 
 -- [[ insert single character before cursor ]]
 vim.cmd([[
@@ -26,7 +27,3 @@ nnoremap ,a :exec "normal a".nr2char(getchar())."\e"<CR>
 -- move up/down by visual line instead of text line
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
-
-vim.keymap.set('n', '<Space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
