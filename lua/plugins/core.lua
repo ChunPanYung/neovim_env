@@ -18,12 +18,8 @@ return {
       { "<Leader>t", "<Cmd>ToggleTerm<CR>", desc = "Terminal Toggle" }
     },
   },
-  { -- Comment Lines
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  },
+  -- Comment Lines
+  { 'numToStr/Comment.nvim' },
   { -- Showing diagnostics, references, telescope results, quickfix etc.
     "folke/trouble.nvim",
     opts = {},
