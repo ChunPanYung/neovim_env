@@ -18,30 +18,8 @@ return {
       { "<Leader>t", "<Cmd>ToggleTerm<CR>", desc = "Terminal Toggle" }
     },
   },
-  { -- Comment Lines
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    config = function()
-      local wk = require("which-key")
-      wk.register({
-        mode = { "n", "v" },
-        ["g"] = { name= "+goto" },
-        ["<Leader>"] = {
-          name = "+leader",
-          i = { name = "insert single character before cursor." },
-          a = { name = "insert single character after cursor." }
-        },
-        ["z"] = { name = "+fold" }
-      })
-
-    end
-  },
+  -- Comment Lines
+  { 'numToStr/Comment.nvim' },
   { -- Showing diagnostics, references, telescope results, quickfix etc.
     "folke/trouble.nvim",
     opts = {},
